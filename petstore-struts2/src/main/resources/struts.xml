@@ -3,15 +3,12 @@
 <!DOCTYPE struts PUBLIC 
     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
     "http://struts.apache.org/dtds/struts-2.0.dtd">
-
 <struts>
-	<package name="myPackage" extends="struts-default">
-		<action name="index" class="com.chandankumar.IndexAction">
-			<result>/jsp/index.jsp</result>
-		</action>
-		<action name="helloWorld" class="helloWorldAction"> 
-			<result name="input">/jsp/index.jsp</result>
-			<result>/jsp/helloWorld.jsp</result>
-		</action>
-	</package>
+    <constant name="struts.action.extension" value=""/>
+    <constant name="struts.enable.SlashesInActionNames" value="true"/>
+    <package name="myPackage" extends="struts-default">
+        <action name="index" class="com.chandankumar.IndexAction">
+            <result type="velocity">/velocity/index.vm</result>
+        </action>
+    </package>
 </struts>
