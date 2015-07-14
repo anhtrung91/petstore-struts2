@@ -1,0 +1,1 @@
+Petstore similar to J2EE blueprint built on struts2
